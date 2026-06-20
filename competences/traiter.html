@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traiter — Cléo Le Bastard</title>
+  <meta name="description" content="Compétence Traiter — Gérer le cycle de vie de la donnée. Projets de Cléo Le Bastard, BUT Science des Données.">
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div class="bg" aria-hidden="true">
+    <div class="bg__glow bg__glow--1"></div>
+    <div class="bg__glow bg__glow--2"></div>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo">Cléo Le Bastard<span class="nav__logo-dot">.</span></a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="../index.html#about"  class="nav__link">À propos</a></li>
+        <li><a href="../index.html#skills" class="nav__link">Compétences</a></li>
+        <li><a href="../alternance.html" class="nav__link">Alternance</a></li>
+        <li><a href="../perspectives.html" class="nav__link">Perspectives</a></li>
+        <li><a href="../contact.html"      class="nav__link">Contact</a></li>
+      </ul>
+      <div class="nav__right">
+        <a href="https://github.com/Onyoropi" target="_blank" rel="noopener" class="nav__cta">GitHub →</a>
+        <button class="nav__burger" id="nav-burger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="comp-hero">
+      <div class="container">
+        <div class="comp-hero__top" data-reveal>
+          <a href="../index.html#skills" class="comp-back">← Compétences</a>
+          <span class="comp-pagination mono">01 / 04</span>
+        </div>
+        <span class="comp-hero__num mono" data-reveal>Compétence 01</span>
+        <h1 class="comp-hero__title" data-reveal>Traiter</h1>
+        <p class="comp-hero__tagline" data-reveal>Gérer le cycle de vie de la donnée</p>
+      </div>
+    </section>
+
+    <!-- A — PRÉSENTATION -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__num mono">A — Présentation</span>
+          <h2 class="section__title">La compétence</h2>
+        </div>
+        <div class="about-grid" data-reveal>
+          <div class="about-text">
+            <p>
+              Maîtrise complète de la gestion du cycle de vie de la donnée, de son intégration à son exploitation décisionnelle.
+              Capable de traduire des besoins métiers en architectures et modèles de données adaptés (bases structurées, entrepôts de données),
+              et d'automatiser des flux de traitement multidimensionnels et hétérogènes. Rigoureux dans le développement, l'intégration de briques logicielles,
+              la phase de test et la documentation des scripts (bonnes pratiques algorithmiques).
+            </p>
+          </div>
+          <div>
+            <div class="tools-bar" style="margin-bottom: 16px;">
+              <span class="tools-bar__label mono">Outils maîtrisés :</span>
+              <div class="tools-bar__items">
+                <span class="tool-chip">SQL</span>
+                <span class="tool-chip">Python</span>
+                <span class="tool-chip">Pandas</span>
+                <span class="tool-chip">Neo4j</span>
+                <span class="tool-chip">Cypher</span>
+                <span class="tool-chip">Talend</span>
+                <span class="tool-chip">APOC</span>
+              </div>
+            </div>
+            <div class="tools-bar">
+              <span class="tools-bar__label mono">Contextes :</span>
+              <div class="tools-bar__items">
+                <span class="tool-chip">Bases relationnelles</span>
+                <span class="tool-chip">Bases graphes</span>
+                <span class="tool-chip">ETL</span>
+                <span class="tool-chip">Datawarehouse</span>
+                <span class="tool-chip">Données sensibles</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- B — PROJETS PAR NIVEAU -->
+    <section class="section section--last">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__num mono">B — Projets associés</span>
+          <h2 class="section__title">Réalisations</h2>
+          <p class="section__desc">Projets et SAÉ mobilisant la compétence Traiter, organisés par niveau d'acquisition.</p>
+        </div>
+
+        <!-- Niveau 1 · BUT1 -->
+        <div class="ac-level" data-reveal>
+          <div class="ac-level__header">
+            <span class="ac-level__num">Niveau 1 · BUT1</span>
+            <span class="ac-level__title">Découverte et structuration de la donnée</span>
+          </div>
+          <div class="bento">
+
+            <a href="../projets/sae-101.html" class="bento-card" data-reveal>
+              <div class="bento-card__top">
+                <span class="bento-card__badge">SAÉ 101</span>
+                <span class="bento-card__context">BUT1 · S1 · IUT Vannes</span>
+              </div>
+              <h3 class="bento-card__title">Reporting SQL — Base de données films</h3>
+              <p class="bento-card__desc">
+                Requêtes SQL sur une base Access (films, acteurs, notes) incluant jointures
+                multiples, agrégations et tris. Reporting avec graphiques sous Excel.
+              </p>
+              <div class="bento-card__tags">
+                <span class="tag">SQL</span>
+                <span class="tag">Access</span>
+                <span class="tag">Excel</span>
+              </div>
+            </a>
+
+            <a href="../projets/sae-206-traiter.html" class="bento-card" data-reveal>
+              <div class="bento-card__top">
+                <span class="bento-card__badge">SAÉ 206</span>
+                <span class="bento-card__context">BUT1 · S2 · IUT Vannes · AP-HP</span>
+              </div>
+              <h3 class="bento-card__title">Analyse de données, reporting et datavisualisation</h3>
+              <p class="bento-card__desc">Nettoyage de 10 CSV (277 variables, 50 patients), calcul de 10 scores de santé et génération de fiches PDF — pipeline R complet sur données AP-HP/ComPaRe.</p>
+              <div class="bento-card__tags">
+                <span class="tag">R</span>
+                <span class="tag">dplyr</span>
+                <span class="tag">ggplot2</span>
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- Niveau 2 · BUT2 -->
+        <div class="ac-level" data-reveal>
+          <div class="ac-level__header">
+            <span class="ac-level__num">Niveau 2 · BUT2</span>
+            <span class="ac-level__title">Automatisation et systèmes décisionnels</span>
+          </div>
+          <div class="bento">
+
+            <a href="../projets/sae-302.html" class="bento-card" data-reveal>
+              <div class="bento-card__top">
+                <span class="bento-card__badge">SAÉ 302</span>
+                <span class="bento-card__context">BUT2 · S3 · IUT Vannes</span>
+              </div>
+              <h3 class="bento-card__title">Intégration de données dans un datawarehouse</h3>
+              <p class="bento-card__desc">Pipeline ETL Talend en 3 zones (staging → intégration → DWH étoile), historisation SCD des clients et vues matérialisées Oracle pour l'analyse commerciale.</p>
+              <div class="bento-card__tags">
+                <span class="tag">Talend</span>
+                <span class="tag">SQL</span>
+                <span class="tag">Oracle</span>
+              </div>
+            </a>
+
+            <a href="../projets/sae-402-traiter.html" class="bento-card" data-reveal>
+              <div class="bento-card__top">
+                <span class="bento-card__badge">SAÉ 402</span>
+                <span class="bento-card__context">BUT2 · S4 · IUT Vannes</span>
+              </div>
+              <h3 class="bento-card__title">WildfireAlert — Classification des feux de forêt</h3>
+              <p class="bento-card__desc">Fusion MODIS + VIIRS (15 500 incendies, 7 régions mondiales, 2024) et création de variables dérivées pour alimenter l'analyse ACP et le modèle Random Forest.</p>
+              <div class="bento-card__tags">
+                <span class="tag">R</span>
+                <span class="tag">MODIS</span>
+                <span class="tag">VIIRS</span>
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <nav class="comp-nav" aria-label="Navigation entre compétences">
+    <div class="container comp-nav__inner">
+      <a href="valoriser.html" class="comp-nav__prev">
+        <span class="comp-nav__dir mono">← Précédente</span>
+        <span class="comp-nav__name">Valoriser</span>
+      </a>
+      <a href="../index.html#skills" class="comp-nav__home">Toutes les compétences</a>
+      <a href="analyser.html" class="comp-nav__next">
+        <span class="comp-nav__dir mono">Suivante →</span>
+        <span class="comp-nav__name">Analyser</span>
+      </a>
+    </div>
+  </nav>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="mono">Cléo Le Bastard</span>
+      <span class="footer__sep">—</span>
+      <span>BUT Science des Données · IUT de Vannes</span>
+      <a href="../contact.html" class="footer__contact">Me contacter</a>
+      <span class="footer__year mono" id="footer-year"></span>
+    </div>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

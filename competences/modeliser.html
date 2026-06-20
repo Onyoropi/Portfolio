@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modéliser — Cléo Le Bastard</title>
+  <meta name="description" content="Compétence Modéliser — Cadre statistique EMS. Projets de Cléo Le Bastard, BUT Science des Données.">
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div class="bg" aria-hidden="true">
+    <div class="bg__glow bg__glow--1"></div>
+    <div class="bg__glow bg__glow--2"></div>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo">Cléo Le Bastard<span class="nav__logo-dot">.</span></a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="../index.html#about"  class="nav__link">À propos</a></li>
+        <li><a href="../index.html#skills" class="nav__link">Compétences</a></li>
+        <li><a href="../alternance.html" class="nav__link">Alternance</a></li>
+        <li><a href="../perspectives.html" class="nav__link">Perspectives</a></li>
+        <li><a href="../contact.html"      class="nav__link">Contact</a></li>
+      </ul>
+      <div class="nav__right">
+        <a href="https://github.com/Onyoropi" target="_blank" rel="noopener" class="nav__cta">GitHub →</a>
+        <button class="nav__burger" id="nav-burger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="comp-hero">
+      <div class="container">
+        <div class="comp-hero__top" data-reveal>
+          <a href="../index.html#skills" class="comp-back">← Compétences</a>
+          <span class="comp-pagination mono">03 / 04</span>
+        </div>
+        <span class="comp-hero__num mono" data-reveal>Compétence 03</span>
+        <h1 class="comp-hero__title" data-reveal>Modéliser<span class="hero__dot">.</span></h1>
+        <p class="comp-hero__tagline" data-reveal>Cadre statistique — spécifique EMS</p>
+      </div>
+    </section>
+
+    <!-- A — PRÉSENTATION -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__num mono">A — Présentation</span>
+          <h2 class="section__title">La compétence</h2>
+        </div>
+        <div class="about-grid" data-reveal>
+          <div class="about-text">
+            <p>
+              La compétence <strong>Modéliser</strong> — spécifique au parcours
+              <strong>Exploration et Modélisation Statistique</strong> — consiste à construire
+              des modèles mathématiques pour représenter, expliquer ou prédire des phénomènes
+              à partir des données.
+            </p>
+            <p>
+              Elle englobe la régression (simple, polynomiale, multiple), la classification
+              supervisée, le clustering non supervisé et la réduction de dimensionnalité.
+              Une attention particulière est portée à la <strong>validation et à la qualité
+              des modèles</strong> : validation croisée K-fold, diagnostic VIF, sélection
+              de variables par méthodes automatiques, évaluation par R², RMSE, AUC.
+            </p>
+            <p>
+              Le parcours EMS vise à former des praticiens capables non seulement de
+              construire un modèle, mais de <strong>justifier leur choix et d'en maîtriser
+              les limites</strong>.
+            </p>
+          </div>
+          <div>
+            <div class="tools-bar" style="margin-bottom: 16px;">
+              <span class="tools-bar__label mono">Outils maîtrisés :</span>
+              <div class="tools-bar__items">
+                <span class="tool-chip">R</span>
+                <span class="tool-chip">Scikit-learn</span>
+                <span class="tool-chip">Python</span>
+                <span class="tool-chip">SciPy</span>
+              </div>
+            </div>
+            <div class="tools-bar">
+              <span class="tools-bar__label mono">Méthodes :</span>
+              <div class="tools-bar__items">
+                <span class="tool-chip">Régression multiple</span>
+                <span class="tool-chip">Random Forest</span>
+                <span class="tool-chip">ACP</span>
+                <span class="tool-chip">Clustering</span>
+                <span class="tool-chip">K-fold</span>
+                <span class="tool-chip">VIF</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- B — PROJETS -->
+    <section class="section section--last">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__num mono">B — Projets associés</span>
+          <h2 class="section__title">Réalisations</h2>
+          <p class="section__desc">Projets et SAÉ mobilisant la compétence Modéliser.</p>
+        </div>
+
+        <div class="ac-level" data-reveal>
+          <div class="ac-level__header">
+            <span class="ac-level__num">Niveau 2 · BUT2 EMS</span>
+            <span class="ac-level__title">Modélisation statistique avancée — parcours EMS</span>
+          </div>
+          <div class="bento">
+
+            <a href="../projets/sae-401-modeliser.html" class="bento-card" data-reveal>
+              <div class="bento-card__top">
+                <span class="bento-card__badge">SAÉ 401</span>
+                <span class="bento-card__context">BUT2 · S4 · IUT Vannes</span>
+              </div>
+              <h3 class="bento-card__title">Expliquer ou prédire une variable quantitative</h3>
+              <p class="bento-card__desc">Régression linéaire multiple sur Boston Housing (490 obs.) — 4 méthodes de sélection convergentes sur 7 variables, RMSE = 3,63 k$ en validation croisée K-fold.</p>
+              <div class="bento-card__tags">
+                <span class="tag">R</span>
+                <span class="tag">Régression</span>
+                <span class="tag">leaps</span>
+                <span class="tag">K-fold</span>
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <nav class="comp-nav" aria-label="Navigation entre compétences">
+    <div class="container comp-nav__inner">
+      <a href="analyser.html" class="comp-nav__prev">
+        <span class="comp-nav__dir mono">← Précédente</span>
+        <span class="comp-nav__name">Analyser</span>
+      </a>
+      <a href="../index.html#skills" class="comp-nav__home">Toutes les compétences</a>
+      <a href="valoriser.html" class="comp-nav__next">
+        <span class="comp-nav__dir mono">Suivante →</span>
+        <span class="comp-nav__name">Valoriser</span>
+      </a>
+    </div>
+  </nav>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="mono">Cléo Le Bastard</span>
+      <span class="footer__sep">—</span>
+      <span>BUT Science des Données · IUT de Vannes</span>
+      <a href="../contact.html" class="footer__contact">Me contacter</a>
+      <span class="footer__year mono" id="footer-year"></span>
+    </div>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

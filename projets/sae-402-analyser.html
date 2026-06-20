@@ -1,0 +1,263 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAÉ 402 — Analyser · Cléo Le Bastard</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div class="bg" aria-hidden="true">
+    <div class="bg__glow bg__glow--1"></div>
+    <div class="bg__glow bg__glow--2"></div>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo">Cléo Le Bastard<span class="nav__logo-dot">.</span></a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="../index.html#about"  class="nav__link">À propos</a></li>
+        <li><a href="../index.html#skills" class="nav__link">Compétences</a></li>
+        <li><a href="../alternance.html" class="nav__link">Alternance</a></li>
+        <li><a href="../perspectives.html" class="nav__link">Perspectives</a></li>
+        <li><a href="../contact.html"      class="nav__link">Contact</a></li>
+      </ul>
+      <div class="nav__right">
+        <a href="https://github.com/Onyoropi" target="_blank" rel="noopener" class="nav__cta">GitHub →</a>
+        <button class="nav__burger" id="nav-burger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="comp-hero">
+      <div class="container">
+        <div class="comp-hero__top" data-reveal>
+          <a href="../competences/analyser.html" class="comp-back">← Analyser</a>
+          <span class="comp-pagination mono">SAÉ 402</span>
+        </div>
+        <span class="comp-hero__num mono" data-reveal>BUT2 · S4 · IUT de Vannes · Groupe Courson, Le Bastard, Tiyal</span>
+        <h1 class="comp-hero__title" data-reveal>WildfireAlert<br>Classification des feux<span class="hero__dot">.</span></h1>
+        <p class="comp-hero__tagline" data-reveal>Random Forest pour prédire la dangerosité des incendies — ACP utilisée pour identifier les variables satellite les plus discriminantes</p>
+      </div>
+    </section>
+
+    <!-- A — Programme national -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__num mono">A</span>
+          <h2 class="section__title">Objectifs du programme national</h2>
+        </div>
+        <div class="proj-content" data-reveal>
+          <p>
+            La SAÉ 402 est le projet intégrateur du BUT2 S4. Elle mobilise simultanément les compétences
+            <strong>Traiter</strong>, <strong>Analyser</strong> et <strong>Valoriser</strong> au niveau 2
+            autour d'une problématique réelle : l'évaluation de la dangerosité des feux de forêt à partir
+            de données satellite en quasi-temps réel.
+          </p>
+          <p>Les objectifs visés par le PN pour cette SAÉ sont :</p>
+          <ul>
+            <li>Mettre en œuvre un pipeline complet : collecte → traitement → analyse → modélisation → restitution</li>
+            <li>Construire et évaluer un modèle de classification supervisée (Random Forest) avec des métriques adaptées au contexte déséquilibré</li>
+            <li>Utiliser l'ACP pour explorer les variables satellite et identifier celles qui discriminent le mieux la dangerosité</li>
+            <li>Produire un outil de restitution interactif actionnable par un public opérationnel non spécialiste</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- B — Problématique & Livrables -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__num mono">B</span>
+          <h2 class="section__title">Problématique & livrables</h2>
+        </div>
+        <div class="about-grid" data-reveal>
+          <div class="about-text">
+            <p>
+              À partir de données satellite <strong>MODIS et VIIRS</strong> couvrant
+              <strong>15 500 incendies</strong> répartis dans 7 régions du monde (2024),
+              peut-on identifier les profils de feux dangereux et classifier automatiquement
+              la puissance radiative d'un incendie à partir de ses seuls indicateurs physiques —
+              avant même l'arrivée des équipes sur site ?
+            </p>
+            <p>
+              Le projet vise à fournir aux équipes d'intervention un <strong>outil d'aide à la
+              décision opérationnel</strong> : classification immédiate Élevée / Modérée,
+              score de danger de 0 à 100 %, information objective et reproductible.
+            </p>
+          </div>
+          <div>
+            <div class="tools-bar" style="margin-bottom: 16px;">
+              <span class="tools-bar__label mono">Livrables :</span>
+              <div class="tools-bar__items">
+                <span class="tool-chip">Application R Shiny (WildfireAlert)</span>
+                <span class="tool-chip">Déployée sur shinyapps.io</span>
+                <span class="tool-chip">8 onglets de parcours guidé</span>
+              </div>
+            </div>
+            <div class="tools-bar">
+              <span class="tools-bar__label mono">Logiciels :</span>
+              <div class="tools-bar__items">
+                <span class="tool-chip">R</span>
+                <span class="tool-chip">RShiny</span>
+                <span class="tool-chip">ggplot2</span>
+                <span class="tool-chip">plotly</span>
+                <span class="tool-chip">randomForest</span>
+                <span class="tool-chip">DT</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- C — Méthodologie -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__num mono">C</span>
+          <h2 class="section__title">Méthodologie</h2>
+        </div>
+        <div class="proj-steps" data-reveal>
+          <div class="proj-step">
+            <span class="proj-step__num mono">01</span>
+            <div class="proj-step__body">
+              <strong>Collecte et structuration des données satellite</strong>
+              <p>Fusion des observations MODIS et VIIRS (satellites Terra, Aqua, Suomi-NPP, NOAA-20) en un jeu unique de 15 500 incendies — 10 types de feux, 7 régions mondiales, données 2024. Création de variables dérivées (intensité composite, saisonnalité, indicateur jour/nuit).</p>
+            </div>
+          </div>
+          <div class="proj-step">
+            <span class="proj-step__num mono">02</span>
+            <div class="proj-step__body">
+              <strong>Analyse descriptive — tableau de bord Firescope</strong>
+              <p>Répartition des 15 500 incendies par type de feu (Agriculture le plus représenté : 3 802 obs.), boxplots comparatifs des 7 variables par type, matrice de corrélation interactive, profils radar par type de feu. KPIs globaux : puissance radiative médiane 35,4 MW, température max observée 48 °C.</p>
+            </div>
+          </div>
+          <div class="proj-step">
+            <span class="proj-step__num mono">03</span>
+            <div class="proj-step__body">
+              <strong>ACP interactive — exploration des variables</strong>
+              <p>ACP sur 7 variables physiques. Scree plot interactif avec règle de Kaiser : 2 axes recommandés (50,4 % de variance cumulée). Axe 1 (27,9 %) : puissance radiative ⊕ / humidité relative ⊖. Axe 2 (22,5 %) : humidité ⊕ précipitations ⊕ / température max ⊖. Axe 3 (16,5 %) : température et vent ⊕ / brillance et puissance ⊖.</p>
+            </div>
+          </div>
+          <div class="proj-step">
+            <span class="proj-step__num mono">04</span>
+            <div class="proj-step__body">
+              <strong>Profils de feux opérationnels</strong>
+              <p>Construction de profils par combinaison de signes sur les axes ACP (ex. Humidité-/Humidité+/Température+ = feux secs à chaleur élevée). Carte des profils dans le plan factoriel, fiches opérationnelles par profil, tableau croisé profil × type de feu.</p>
+            </div>
+          </div>
+          <div class="proj-step">
+            <span class="proj-step__num mono">05</span>
+            <div class="proj-step__body">
+              <strong>Modèle Random Forest — classification de la dangerosité</strong>
+              <p>Classification binaire : puissance radiative Élevée vs Modérée (15 % des feux à haute puissance = 2 325 obs. sur 15 500). Modèle optimisé pour le rappel — priorité à ne pas manquer les feux dangereux. Résultats : AUC = 0,774, rappel = 31,8 %, précision des alertes = 56,3 %, F1 = 0,41.</p>
+            </div>
+          </div>
+          <div class="proj-step">
+            <span class="proj-step__num mono">06</span>
+            <div class="proj-step__body">
+              <strong>Déploiement Shiny en parcours guidé</strong>
+              <p>Application WildfireAlert en 8 onglets numérotés : Présentation → Tableau de bord → Comprendre les axes → Explorer en 3D → Profils de feux → Modèle RF → Classifier un feu → Données brutes. Interface de prédiction manuelle par sliders avec verdict instantané.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- D — Résultats -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__num mono">D</span>
+          <h2 class="section__title">Résultats obtenus</h2>
+        </div>
+        <div class="proj-content" data-reveal>
+          <p>
+            L'application <strong>WildfireAlert</strong> est déployée et accessible publiquement.
+            Elle intègre un parcours analytique complet — de l'exploration descriptive à la prédiction
+            individuelle — dans une interface pensée pour des équipes terrain.
+          </p>
+          <ul>
+            <li>ACP : 3 axes retenus, 67 % de variance expliquée — Axe 1 : intensité/sécheresse, Axe 2 : humidité atmosphérique, Axe 3 : chaleur/vent</li>
+            <li>Espace factoriel 3D interactif : 15 500 feux coloriés par type, taille proportionnelle à la puissance radiative</li>
+            <li>Profils opérationnels identifiés et cartographiés avec distribution par type de feu</li>
+            <li>Random Forest : AUC = 0,774 — prédiction manuelle par incendie avec score de danger 0–100 %</li>
+          </ul>
+          <div class="proj-cta">
+            <a href="https://tiyale2504987.shinyapps.io/Courson_Le_Bastard_Tiyal_Wildfire_App/" class="btn btn--primary" target="_blank" rel="noopener">Voir l'application →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- E — Apprentissages Critiques -->
+    <section class="section section--last">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__num mono">E</span>
+          <h2 class="section__title">Ce que j'en retire</h2>
+        </div>
+        <div class="acq-grid" data-reveal>
+          <div class="acq-item">
+            <span class="acq-item__code mono">AC22.01</span>
+            <p class="acq-item__desc">Mettre en œuvre une ACP sur des données multivariées réelles et en interpréter les axes factoriels.</p>
+            <span class="acq-badge acq-badge--ok">Acquis</span>
+          </div>
+          <div class="acq-item">
+            <span class="acq-item__code mono">AC22.02</span>
+            <p class="acq-item__desc">Identifier des profils d'individus dans l'espace factoriel et relier ces profils à une problématique opérationnelle.</p>
+            <span class="acq-badge acq-badge--ok">Acquis</span>
+          </div>
+          <div class="acq-item">
+            <span class="acq-item__code mono">AC22.03</span>
+            <p class="acq-item__desc">Articuler une analyse exploratoire et un modèle prédictif supervisé dans une démarche cohérente.</p>
+            <span class="acq-badge acq-badge--ok">Acquis</span>
+          </div>
+          <div class="acq-item">
+            <span class="acq-item__code mono">AC24.01</span>
+            <p class="acq-item__desc">Concevoir un outil de restitution interactif adapté à un usage opérationnel et à un public non spécialiste.</p>
+            <span class="acq-badge acq-badge--ok">Acquis</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <nav class="comp-nav" aria-label="Navigation">
+    <div class="container comp-nav__inner">
+      <a href="../competences/analyser.html" class="comp-nav__prev">
+        <span class="comp-nav__dir mono">← Retour</span>
+        <span class="comp-nav__name">Analyser</span>
+      </a>
+      <a href="../index.html#skills" class="comp-nav__home">Toutes les compétences</a>
+      <div></div>
+    </div>
+  </nav>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="mono">Cléo Le Bastard</span>
+      <span class="footer__sep">—</span>
+      <span>BUT Science des Données · IUT de Vannes</span>
+      <a href="../contact.html" class="footer__contact">Me contacter</a>
+      <span class="footer__year mono" id="footer-year"></span>
+    </div>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

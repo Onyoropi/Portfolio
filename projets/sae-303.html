@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAÉ 303 — Séries temporelles · Cléo Le Bastard</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div class="bg" aria-hidden="true">
+    <div class="bg__glow bg__glow--1"></div>
+    <div class="bg__glow bg__glow--2"></div>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo">Cléo Le Bastard<span class="nav__logo-dot">.</span></a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="../index.html#about"  class="nav__link">À propos</a></li>
+        <li><a href="../index.html#skills" class="nav__link">Compétences</a></li>
+        <li><a href="../alternance.html" class="nav__link">Alternance</a></li>
+        <li><a href="../perspectives.html" class="nav__link">Perspectives</a></li>
+        <li><a href="../contact.html"      class="nav__link">Contact</a></li>
+      </ul>
+      <div class="nav__right">
+        <a href="https://github.com/Onyoropi" target="_blank" rel="noopener" class="nav__cta">GitHub →</a>
+        <button class="nav__burger" id="nav-burger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="comp-hero">
+      <div class="container">
+        <div class="comp-hero__top" data-reveal>
+          <a href="../competences/analyser.html" class="comp-back">← Analyser</a>
+          <span class="comp-pagination mono">SAÉ 303</span>
+        </div>
+        <span class="comp-hero__num mono" data-reveal>BUT2 · S3 · IUT de Vannes · Courson, Le Bastard</span>
+        <h1 class="comp-hero__title" data-reveal>Trafic autoroutier<br>Séries temporelles<span class="hero__dot">.</span></h1>
+        <p class="comp-hero__tagline" data-reveal>Modélisation des composantes tendance et saisonnalité — modèle Mix retenu (EQM = 0,089) comme meilleur prédicteur sur données 2019</p>
+      </div>
+    </section>
+
+    <!-- A — Programme national -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__num mono">A</span>
+          <h2 class="section__title">Objectifs du programme national</h2>
+        </div>
+        <div class="proj-content" data-reveal>
+          <p>
+            La SAÉ 303 mobilise la compétence <strong>Analyser</strong> au niveau 2 autour
+            de l'analyse et la modélisation de séries temporelles réelles. Elle s'inscrit dans
+            une démarche méthodologique rigoureuse : identifier les composantes d'une série,
+            choisir un modèle adapté, estimer ses paramètres, puis évaluer sa capacité prédictive
+            sur une période de test.
+          </p>
+          <p>Les objectifs visés par le PN pour cette SAÉ sont :</p>
+          <ul>
+            <li>Identifier et caractériser les composantes d'une série temporelle (tendance, saisonnalité, bruit)</li>
+            <li>Choisir et justifier un modèle (additif ou multiplicatif) à partir de l'analyse graphique</li>
+            <li>Estimer tendance et saisonnalité par méthodes paramétriques et non paramétriques</li>
+            <li>Évaluer et comparer des prédictions à l'aide de l'Erreur Quadratique Moyenne (EQM)</li>
+            <li>Interpréter les limites d'un modèle face à un événement exogène imprévu</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- B — Problématique & Livrables -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__num mono">B</span>
+          <h2 class="section__title">Problématique & livrables</h2>
+        </div>
+        <div class="about-grid" data-reveal>
+          <div class="about-text">
+            <p>
+              À partir de <strong>192 observations mensuelles</strong> de trafic autoroutier français
+              (janvier 2009 – décembre 2024), exprimées en véhicule-kilomètre : peut-on modéliser
+              les composantes tendancielle et saisonnière de la série pour prédire le trafic 2019 —
+              et que révèle l'année 2020 sur les limites des modèles face à un choc exogène ?
+            </p>
+            <p>
+              La série présente une <strong>saisonnalité annuelle marquée</strong> (pics juillet–août,
+              creux janvier–février) et une faible tendance croissante sur 2009–2019.
+              L'effondrement du trafic en avril 2020 (3,069 Veh_km vs ~12 en temps normal)
+              illustre les limites structurelles de tout modèle historique face au COVID.
+            </p>
+          </div>
+          <div>
+            <div class="tools-bar" style="margin-bottom: 16px;">
+              <span class="tools-bar__label mono">Livrables :</span>
+              <div class="tools-bar__items">
+                <span class="tool-chip">Notebook R commenté</span>
+                <span class="tool-chip">Prédictions 2019–2020</span>
+                <span class="tool-chip">Comparaison EQM 3 modèles</span>
+              </div>
+            </div>
+            <div class="tools-bar">
+              <span class="tools-bar__label mono">Logiciels :</span>
+              <div class="tools-bar__items">
+                <span class="tool-chip">R / RStudio</span>
+                <span class="tool-chip">tidyr · readr</span>
+                <span class="tool-chip">pastecs (buysbal)</span>
+                <span class="tool-chip">kableExtra</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- C — Méthodologie -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__num mono">C</span>
+          <h2 class="section__title">Méthodologie</h2>
+        </div>
+        <div class="proj-steps" data-reveal>
+          <div class="proj-step">
+            <span class="proj-step__num mono">01</span>
+            <div class="proj-step__body">
+              <strong>Exploration et tableau de Buys-Ballot</strong>
+              <p>Chargement du CSV (192 obs., colonnes Date et Veh_km). Conversion de la date au format R, extraction année/mois. Construction du tableau de Buys-Ballot via <code>pivot_wider()</code> : 16 années × 12 mois. Lecture : saisonnalité annuelle évidente (pics juillet–août systématiques), légère tendance haussière visible sur les lignes, choc COVID clairement isolé en avril–mai 2020 (minimum 3,069).</p>
+            </div>
+          </div>
+          <div class="proj-step">
+            <span class="proj-step__num mono">02</span>
+            <div class="proj-step__body">
+              <strong>Choix du modèle — chronogramme, ACF et visualisation par années</strong>
+              <p>Série d'apprentissage : 2009–2018 (120 obs.). Série de test : 2019. Chronogramme : amplitude saisonnière stable → modèle additif retenu. Autocorrélogramme (ACF) : pics significatifs aux lags 12, 24, 36 confirmant la saisonnalité annuelle (S=12) ; décroissance lente aux petits lags indiquant une tendance non stationnaire. Visualisation <code>matplot()</code> par années : courbes parallèles → modèle additif confirmé.</p>
+            </div>
+          </div>
+          <div class="proj-step">
+            <span class="proj-step__num mono">03</span>
+            <div class="proj-step__body">
+              <strong>Estimation paramétrique — tendance linéaire + saisonnalité sin/cos</strong>
+              <p>Tendance : régression linéaire <code>lm(Veh_km ~ time)</code> → ordonnée à l'origine 11,45, pente +0,0146 Veh_km/mois. Saisonnalité paramétrique : modèle sin/cos sur la série désaisonnalisée (coefficients sint = −1,1078, cost = −1,5999). Prédiction 2019 par extrapolation. EQM sur 2019 : <strong>0,432</strong>. Surestimation notable du pic estival.</p>
+            </div>
+          </div>
+          <div class="proj-step">
+            <span class="proj-step__num mono">04</span>
+            <div class="proj-step__body">
+              <strong>Estimation non paramétrique et comparaison des 3 modèles par EQM</strong>
+              <p>Tendance non paramétrique : moyenne mobile d'ordre 12 (MM12) via <code>filter()</code> — lisse la saisonnalité. Saisonnalité non paramétrique : moyennes par mois via <code>aggregate(~ cycle())</code>. Trois modèles comparés sur 2019 : Paramétrique (EQM = 0,432), Mix — tendance param + saisonnalité NP (EQM = <strong>0,089</strong>, meilleur), Holt-Winters (EQM = 0,203). Modèle Mix sélectionné.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- D — Résultats -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__num mono">D</span>
+          <h2 class="section__title">Résultats obtenus</h2>
+        </div>
+        <div class="proj-content" data-reveal>
+          <p>
+            Le modèle Mix (tendance paramétrique + saisonnalité par moyennes mensuelles) s'impose
+            comme le meilleur prédicteur sur 2019, avec une EQM 5 fois inférieure au modèle
+            purement paramétrique.
+          </p>
+          <ul>
+            <li>Modèle Mix : EQM = 0,089 — prédictions 2019 très proches des valeurs réelles</li>
+            <li>Modèle paramétrique (tendance + sin/cos) : EQM = 0,432 — surestimation du pic estival</li>
+            <li>Lissage de Holt-Winters : EQM = 0,203 — correct mais inférieur au Mix</li>
+            <li>Tendance estimée : +0,0146 Veh_km/mois — croissance lente et linéaire sur 2009–2018</li>
+            <li>Choc COVID 2020 : minimum 3,069 Veh_km en avril (vs moyenne normale ~12,4) — aucun modèle ne pouvait l'anticiper</li>
+          </ul>
+          <div class="proj-cta">
+            <a href="../assets/docs/rapport-sae-303.html" class="btn btn--primary" target="_blank" rel="noopener">Voir les résultats →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- E — Apprentissages Critiques -->
+    <section class="section section--last">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__num mono">E</span>
+          <h2 class="section__title">Ce que j'en retire</h2>
+        </div>
+        <div class="acq-grid" data-reveal>
+          <div class="acq-item">
+            <span class="acq-item__code mono">AC22.01</span>
+            <p class="acq-item__desc">Identifier les composantes d'une série réelle (tendance, saisonnalité, bruit) et choisir un modèle additif sur la base de l'analyse graphique et de l'ACF.</p>
+            <span class="acq-badge acq-badge--ok">Acquis</span>
+          </div>
+          <div class="acq-item">
+            <span class="acq-item__code mono">AC22.02</span>
+            <p class="acq-item__desc">Estimer la tendance et la saisonnalité par approches paramétriques (régression, sin/cos) et non paramétriques (MM12, moyennes mensuelles) et interpréter les résultats.</p>
+            <span class="acq-badge acq-badge--ok">Acquis</span>
+          </div>
+          <div class="acq-item">
+            <span class="acq-item__code mono">AC22.03</span>
+            <p class="acq-item__desc">Comparer trois modèles de prédiction par l'EQM sur une période de test et sélectionner le plus performant de façon quantitative et argumentée.</p>
+            <span class="acq-badge acq-badge--ok">Acquis</span>
+          </div>
+          <div class="acq-item">
+            <span class="acq-item__code mono">AC12.02</span>
+            <p class="acq-item__desc">Comprendre qu'un modèle calibré sur des données historiques ne peut anticiper un choc exogène sans précédent — illustré par l'échec de toutes les prédictions face au confinement 2020.</p>
+            <span class="acq-badge acq-badge--ok">Acquis</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <nav class="comp-nav" aria-label="Navigation">
+    <div class="container comp-nav__inner">
+      <a href="../competences/analyser.html" class="comp-nav__prev">
+        <span class="comp-nav__dir mono">← Retour</span>
+        <span class="comp-nav__name">Analyser</span>
+      </a>
+      <a href="../index.html#skills" class="comp-nav__home">Toutes les compétences</a>
+      <div></div>
+    </div>
+  </nav>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="mono">Cléo Le Bastard</span>
+      <span class="footer__sep">—</span>
+      <span>BUT Science des Données · IUT de Vannes</span>
+      <a href="../contact.html" class="footer__contact">Me contacter</a>
+      <span class="footer__year mono" id="footer-year"></span>
+    </div>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

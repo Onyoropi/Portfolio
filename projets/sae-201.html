@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAÉ 201 — BDD CompuDistri · Cléo Le Bastard</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div class="bg" aria-hidden="true">
+    <div class="bg__glow bg__glow--1"></div>
+    <div class="bg__glow bg__glow--2"></div>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo">Cléo Le Bastard<span class="nav__logo-dot">.</span></a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="../index.html#about"  class="nav__link">À propos</a></li>
+        <li><a href="../index.html#skills" class="nav__link">Compétences</a></li>
+        <li><a href="../alternance.html" class="nav__link">Alternance</a></li>
+        <li><a href="../perspectives.html" class="nav__link">Perspectives</a></li>
+        <li><a href="../contact.html"      class="nav__link">Contact</a></li>
+      </ul>
+      <div class="nav__right">
+        <a href="https://github.com/Onyoropi" target="_blank" rel="noopener" class="nav__cta">GitHub →</a>
+        <button class="nav__burger" id="nav-burger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="comp-hero">
+      <div class="container">
+        <div class="comp-hero__top" data-reveal>
+          <a href="../competences/traiter.html" class="comp-back">← Traiter</a>
+          <span class="comp-pagination mono">SAÉ 201</span>
+        </div>
+        <span class="comp-hero__num mono" data-reveal>BUT1 · S2 · IUT de Vannes</span>
+        <h1 class="comp-hero__title" data-reveal>BDD relationnelle<br>CompuDistri<span class="hero__dot">.</span></h1>
+        <p class="comp-hero__tagline" data-reveal>Conception et implémentation d'une base de données relationnelle</p>
+      </div>
+    </section>
+
+    <!-- A — Programme national -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__num mono">A</span>
+          <h2 class="section__title">Objectifs du programme national</h2>
+        </div>
+        <div class="proj-content" data-reveal>
+          <p>
+            La SAÉ 201 s'inscrit dans la compétence <strong>Traiter</strong> au niveau 1 (BUT1 S2)
+            et constitue le projet de bases de données le plus complet du semestre. Elle implique
+            une maîtrise complète du cycle de conception d'une BDD : du besoin métier jusqu'aux
+            requêtes SQL opérationnelles.
+          </p>
+          <p>Les objectifs visés par le PN pour cette SAÉ sont :</p>
+          <ul>
+            <li>Concevoir un modèle conceptuel de données (MCD) à partir d'un cas d'entreprise</li>
+            <li>Maîtriser la dérivation MCD → modèle logique → implémentation SQL</li>
+            <li>Mesurer l'importance de la maîtrise de la structure des données à exploiter</li>
+            <li>Rédiger un ensemble complet de requêtes SQL couvrant les besoins métier</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- B — Problématique & Livrables -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__num mono">B</span>
+          <h2 class="section__title">Problématique & livrables</h2>
+        </div>
+        <div class="about-grid" data-reveal>
+          <div class="about-text">
+            <p>
+              L'entreprise fictive <strong>CompuDistri</strong> gère sa facturation sur papier.
+              La problématique imposée était : comment <strong>informatiser entièrement ce système</strong>
+              en concevant une base de données relationnelle normalisée, puis en produisant les
+              requêtes permettant de répondre aux besoins opérationnels ?
+            </p>
+            <p>
+              Le défi portait sur la capacité à passer d'un énoncé en langage naturel à un
+              modèle de données fonctionnel et requêtable.
+            </p>
+          </div>
+          <div>
+            <div class="tools-bar" style="margin-bottom: 16px;">
+              <span class="tools-bar__label mono">Livrables :</span>
+              <div class="tools-bar__items">
+                <span class="tool-chip">MCD + graphe dépendances</span>
+                <span class="tool-chip">Dictionnaire des données</span>
+                <span class="tool-chip">BDD implémentée (42 requêtes)</span>
+                <span class="tool-chip">Documentation HTML</span>
+              </div>
+            </div>
+            <div class="tools-bar">
+              <span class="tools-bar__label mono">Logiciels :</span>
+              <div class="tools-bar__items">
+                <span class="tool-chip">Looping</span>
+                <span class="tool-chip">IBEASY+</span>
+                <span class="tool-chip">Microsoft Access</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- C — Méthodologie -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__num mono">C</span>
+          <h2 class="section__title">Méthodologie</h2>
+        </div>
+        <div class="proj-steps" data-reveal>
+          <div class="proj-step">
+            <span class="proj-step__num mono">01</span>
+            <div class="proj-step__body">
+              <strong>Modélisation conceptuelle (MCD)</strong>
+              <p>Identification des entités clés (FOURNISSEURS, ARTICLES, FACTURES, CLIENTS, EMPLOYÉS), définition des relations et cardinalités sous Looping.</p>
+            </div>
+          </div>
+          <div class="proj-step">
+            <span class="proj-step__num mono">02</span>
+            <div class="proj-step__body">
+              <strong>Dérivation vers le modèle logique</strong>
+              <p>Passage MCD → tables normalisées sous IBEASY+, construction du graphe de dépendances fonctionnelles et du dictionnaire des données.</p>
+            </div>
+          </div>
+          <div class="proj-step">
+            <span class="proj-step__num mono">03</span>
+            <div class="proj-step__body">
+              <strong>Implémentation sous Access</strong>
+              <p>Import du schéma, création des relations et contraintes d'intégrité, tests de cohérence.</p>
+            </div>
+          </div>
+          <div class="proj-step">
+            <span class="proj-step__num mono">04</span>
+            <div class="proj-step__body">
+              <strong>Rédaction et test des 42 requêtes SQL</strong>
+              <p>Couverture complète des besoins métier : sélections, jointures multiples, agrégations (SUM, COUNT, AVG), filtres combinés et tris.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- D — Résultats -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__num mono">D</span>
+          <h2 class="section__title">Résultats obtenus</h2>
+        </div>
+        <div class="proj-content" data-reveal>
+          <p>
+            La base de données CompuDistri a été entièrement conçue, implémentée et documentée.
+            Les <strong>42 requêtes SQL</strong> couvrent l'ensemble des besoins métier identifiés
+            et ont été testées et validées.
+          </p>
+          <ul>
+            <li>MCD validé avec entités, relations et cardinalités complètes</li>
+            <li>Base de données normalisée importée et fonctionnelle sous Access</li>
+            <li>42 requêtes SQL testées, de la plus simple à la plus complexe</li>
+            <li>Documentation HTML du projet</li>
+          </ul>
+          <div class="proj-cta">
+            <a href="../assets/docs/rapport-sae-201.pdf" class="btn btn--primary" target="_blank" rel="noopener">Voir les résultats →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- E — Apprentissages Critiques -->
+    <section class="section section--last">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__num mono">E</span>
+          <h2 class="section__title">Ce que j'en retire</h2>
+        </div>
+        <div class="acq-grid" data-reveal>
+          <div class="acq-item">
+            <span class="acq-item__code mono">AC11.04</span>
+            <p class="acq-item__desc">Mesurer l'importance de maîtriser la structure des données à exploiter.</p>
+            <span class="acq-badge acq-badge--progress">En cours d'acquisition</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <nav class="comp-nav" aria-label="Navigation">
+    <div class="container comp-nav__inner">
+      <a href="../competences/traiter.html" class="comp-nav__prev">
+        <span class="comp-nav__dir mono">← Retour</span>
+        <span class="comp-nav__name">Traiter</span>
+      </a>
+      <a href="../index.html#skills" class="comp-nav__home">Toutes les compétences</a>
+      <div></div>
+    </div>
+  </nav>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="mono">Cléo Le Bastard</span>
+      <span class="footer__sep">—</span>
+      <span>BUT Science des Données · IUT de Vannes</span>
+      <a href="../contact.html" class="footer__contact">Me contacter</a>
+      <span class="footer__year mono" id="footer-year"></span>
+    </div>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

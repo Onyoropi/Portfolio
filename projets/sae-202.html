@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAÉ 202 — Estimation par sondage · Cléo Le Bastard</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div class="bg" aria-hidden="true">
+    <div class="bg__glow bg__glow--1"></div>
+    <div class="bg__glow bg__glow--2"></div>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo">Cléo Le Bastard<span class="nav__logo-dot">.</span></a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="../index.html#about"  class="nav__link">À propos</a></li>
+        <li><a href="../index.html#skills" class="nav__link">Compétences</a></li>
+        <li><a href="../alternance.html" class="nav__link">Alternance</a></li>
+        <li><a href="../perspectives.html" class="nav__link">Perspectives</a></li>
+        <li><a href="../contact.html"      class="nav__link">Contact</a></li>
+      </ul>
+      <div class="nav__right">
+        <a href="https://github.com/Onyoropi" target="_blank" rel="noopener" class="nav__cta">GitHub →</a>
+        <button class="nav__burger" id="nav-burger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="comp-hero">
+      <div class="container">
+        <div class="comp-hero__top" data-reveal>
+          <a href="../competences/analyser.html" class="comp-back">← Analyser</a>
+          <span class="comp-pagination mono">SAÉ 202</span>
+        </div>
+        <span class="comp-hero__num mono" data-reveal>BUT1 · S2 · IUT de Vannes</span>
+        <h1 class="comp-hero__title" data-reveal>Estimation par sondage<br>Villes de Bretagne<span class="hero__dot">.</span></h1>
+        <p class="comp-hero__tagline" data-reveal>Sondage aléatoire simple, intervalles de fluctuation et échantillonnage stratifié</p>
+      </div>
+    </section>
+
+    <!-- A — Programme national -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__num mono">A</span>
+          <h2 class="section__title">Objectifs du programme national</h2>
+        </div>
+        <div class="proj-content" data-reveal>
+          <p>
+            La SAÉ 202 s'inscrit dans la compétence <strong>Analyser</strong> au niveau 1 (BUT1 S2)
+            et constitue l'introduction à l'inférence statistique. Elle pose les bases de la
+            théorie des sondages, indispensable dans tout travail de data science impliquant
+            des données issues d'un échantillon.
+          </p>
+          <p>Les objectifs visés par le PN pour cette SAÉ sont :</p>
+          <ul>
+            <li>Comprendre et mettre en œuvre un sondage aléatoire simple sans remise</li>
+            <li>Calculer des estimateurs et construire des intervalles de fluctuation</li>
+            <li>Appréhender la notion de fluctuation d'échantillonnage via des simulations</li>
+            <li>Comparer les méthodes d'échantillonnage (simple vs stratifié)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- B — Problématique & Livrables -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__num mono">B</span>
+          <h2 class="section__title">Problématique & livrables</h2>
+        </div>
+        <div class="about-grid" data-reveal>
+          <div class="about-text">
+            <p>
+              À partir du jeu de données des <strong>communes de Bretagne</strong> (population,
+              densité, superficie), comment estimer des paramètres de la population complète
+              à partir d'un simple échantillon, et <strong>quantifier l'incertitude</strong>
+              de cette estimation ?
+            </p>
+            <p>
+              Le projet visait à illustrer concrètement la théorie statistique : un bon sondage
+              permet d'approcher la réalité avec une précision mesurable, même sur un petit
+              échantillon.
+            </p>
+          </div>
+          <div>
+            <div class="tools-bar" style="margin-bottom: 16px;">
+              <span class="tools-bar__label mono">Livrables :</span>
+              <div class="tools-bar__items">
+                <span class="tool-chip">Rapport R Markdown</span>
+                <span class="tool-chip">Visualisations statistiques</span>
+                <span class="tool-chip">Analyse comparée SAS vs stratifié</span>
+              </div>
+            </div>
+            <div class="tools-bar">
+              <span class="tools-bar__label mono">Logiciels :</span>
+              <div class="tools-bar__items">
+                <span class="tool-chip">R</span>
+                <span class="tool-chip">RStudio</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- C — Méthodologie -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__num mono">C</span>
+          <h2 class="section__title">Méthodologie</h2>
+        </div>
+        <div class="proj-steps" data-reveal>
+          <div class="proj-step">
+            <span class="proj-step__num mono">01</span>
+            <div class="proj-step__body">
+              <strong>Analyse descriptive initiale</strong>
+              <p>Statistiques descriptives, histogrammes et boxplots du jeu de données communes bretonnes — identification de la forte asymétrie des distributions.</p>
+            </div>
+          </div>
+          <div class="proj-step">
+            <span class="proj-step__num mono">02</span>
+            <div class="proj-step__body">
+              <strong>Sondage aléatoire simple sans remise (SAS)</strong>
+              <p>Tirage d'échantillons de différentes tailles sous R, calcul de la moyenne estimée et construction des intervalles de fluctuation à 95 %.</p>
+            </div>
+          </div>
+          <div class="proj-step">
+            <span class="proj-step__num mono">03</span>
+            <div class="proj-step__body">
+              <strong>Simulation du théorème central limite</strong>
+              <p>Illustration par simulation de la convergence des estimateurs vers la loi normale lorsque la taille d'échantillon augmente.</p>
+            </div>
+          </div>
+          <div class="proj-step">
+            <span class="proj-step__num mono">04</span>
+            <div class="proj-step__body">
+              <strong>Échantillonnage stratifié et comparaison</strong>
+              <p>Stratification par taille de commune (rural, semi-urbain, urbain), comparaison de la précision entre SAS et stratifié.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- D — Résultats -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__num mono">D</span>
+          <h2 class="section__title">Résultats obtenus</h2>
+        </div>
+        <div class="proj-content" data-reveal>
+          <p>
+            Le rapport R Markdown présente l'ensemble de la démarche inférentielle avec visualisations
+            et interprétations. La comparaison des deux méthodes a montré que
+            <strong>l'échantillonnage stratifié améliore significativement la précision</strong>
+            par rapport au SAS sur ce jeu de données très asymétrique.
+          </p>
+          <ul>
+            <li>Intervalles de fluctuation à 95 % calculés pour différentes tailles d'échantillon</li>
+            <li>Simulation illustrant la convergence vers la loi normale (TCL)</li>
+            <li>Comparaison quantitative SAS vs stratifié sur la précision des estimateurs</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- E — Apprentissages Critiques -->
+    <section class="section section--last">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__num mono">E</span>
+          <h2 class="section__title">Ce que j'en retire</h2>
+        </div>
+        <div class="acq-grid" data-reveal>
+          <div class="acq-item">
+            <span class="acq-item__code mono">AC12.01</span>
+            <p class="acq-item__desc">Réaliser que les sources de données ont des caractéristiques propres à considérer (variation, précision, mise à jour...).</p>
+            <span class="acq-badge acq-badge--ok">Acquis</span>
+          </div>
+          <div class="acq-item">
+            <span class="acq-item__code mono">AC12.05</span>
+            <p class="acq-item__desc">Comprendre l'intérêt de l'utilisation d'un modèle probabiliste.</p>
+            <span class="acq-badge acq-badge--ok">Acquis</span>
+          </div>
+          <div class="acq-item">
+            <span class="acq-item__code mono">AC12.06</span>
+            <p class="acq-item__desc">Appréhender la notion de fluctuation d'échantillonnage, notamment à l'aide de simulations probabilistes.</p>
+            <span class="acq-badge acq-badge--ok">Acquis</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <nav class="comp-nav" aria-label="Navigation">
+    <div class="container comp-nav__inner">
+      <a href="../competences/analyser.html" class="comp-nav__prev">
+        <span class="comp-nav__dir mono">← Retour</span>
+        <span class="comp-nav__name">Analyser</span>
+      </a>
+      <a href="../index.html#skills" class="comp-nav__home">Toutes les compétences</a>
+      <div></div>
+    </div>
+  </nav>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="mono">Cléo Le Bastard</span>
+      <span class="footer__sep">—</span>
+      <span>BUT Science des Données · IUT de Vannes</span>
+      <a href="../contact.html" class="footer__contact">Me contacter</a>
+      <span class="footer__year mono" id="footer-year"></span>
+    </div>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

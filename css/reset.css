@@ -1,0 +1,53 @@
+/* =============================================
+   RESET : normalise le comportement par défaut
+   entre les différents navigateurs
+   ============================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Empêche la sélection de texte par défaut (on est sur un "OS") */
+body {
+  user-select: none;
+}
+
+/* Mais on autorise la sélection à l'intérieur des fenêtres */
+.window-content,
+.window-content * {
+  user-select: text;
+}

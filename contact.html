@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Cléo Le Bastard</title>
+  <meta name="description" content="Contacter Cléo Le Bastard — Étudiante BUT Science des Données, apprentie data scientist.">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div class="bg" aria-hidden="true">
+    <div class="bg__glow bg__glow--1"></div>
+    <div class="bg__glow bg__glow--2"></div>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Cléo Le Bastard<span class="nav__logo-dot">.</span></a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html#about"   class="nav__link">À propos</a></li>
+        <li><a href="index.html#skills"  class="nav__link">Compétences</a></li>
+        <li><a href="alternance.html"    class="nav__link">Alternance</a></li>
+        <li><a href="perspectives.html"  class="nav__link">Perspectives</a></li>
+        <li><a href="contact.html"       class="nav__link active">Contact</a></li>
+      </ul>
+      <div class="nav__right">
+        <a href="https://github.com/Onyoropi" target="_blank" rel="noopener" class="nav__cta">GitHub →</a>
+        <button class="nav__burger" id="nav-burger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="contact-hero">
+      <div class="container">
+        <span class="section__num mono" data-reveal>Contact</span>
+        <h1 class="section__title" data-reveal>
+          Travaillons<br>ensemble<span class="hero__dot">.</span>
+        </h1>
+        <p class="section__desc" data-reveal>
+          Étudiant en BUT Science des Données en alternance chez La Poste,
+          ouvert à toute discussion autour de la data, d'un stage ou d'une opportunité future.
+        </p>
+      </div>
+    </section>
+
+    <!-- CARDS CONTACT -->
+    <section class="section section--last">
+      <div class="container">
+        <div class="contact-cards" data-reveal>
+
+          <a href="mailto:cleo.lebastard@gmail.com" class="contact-card">
+            <div class="contact-card__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 6h16v12H4z"/><path d="M4 6l8 7 8-7"/>
+              </svg>
+            </div>
+            <div class="contact-card__info">
+              <span class="contact-card__label mono">Email</span>
+              <span class="contact-card__value">cleo.lebastard@gmail.com</span>
+            </div>
+            <span class="contact-card__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/cl%C3%A9o-le-bastard-032003330/" target="_blank" rel="noopener" class="contact-card">
+            <div class="contact-card__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                <path d="M7 10v7M7 7v.01M11 17v-4a2 2 0 014 0v4M11 13v4"/>
+              </svg>
+            </div>
+            <div class="contact-card__info">
+              <span class="contact-card__label mono">LinkedIn</span>
+              <span class="contact-card__value">Cléo Le Bastard</span>
+            </div>
+            <span class="contact-card__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a href="https://github.com/Onyoropi" target="_blank" rel="noopener" class="contact-card">
+            <div class="contact-card__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+              </svg>
+            </div>
+            <div class="contact-card__info">
+              <span class="contact-card__label mono">GitHub</span>
+              <span class="contact-card__value">github.com/Onyoropi</span>
+            </div>
+            <span class="contact-card__arrow" aria-hidden="true">→</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="mono">Cléo Le Bastard</span>
+      <span class="footer__sep">—</span>
+      <span>BUT Science des Données · IUT de Vannes</span>
+      <span class="footer__year mono" id="footer-year"></span>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

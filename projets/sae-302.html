@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAÉ 302 — Datawarehouse & ETL · Cléo Le Bastard</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div class="bg" aria-hidden="true">
+    <div class="bg__glow bg__glow--1"></div>
+    <div class="bg__glow bg__glow--2"></div>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo">Cléo Le Bastard<span class="nav__logo-dot">.</span></a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="../index.html#about"  class="nav__link">À propos</a></li>
+        <li><a href="../index.html#skills" class="nav__link">Compétences</a></li>
+        <li><a href="../alternance.html" class="nav__link">Alternance</a></li>
+        <li><a href="../perspectives.html" class="nav__link">Perspectives</a></li>
+        <li><a href="../contact.html"      class="nav__link">Contact</a></li>
+      </ul>
+      <div class="nav__right">
+        <a href="https://github.com/Onyoropi" target="_blank" rel="noopener" class="nav__cta">GitHub →</a>
+        <button class="nav__burger" id="nav-burger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="comp-hero">
+      <div class="container">
+        <div class="comp-hero__top" data-reveal>
+          <a href="../competences/traiter.html" class="comp-back">← Traiter</a>
+          <span class="comp-pagination mono">SAÉ 302</span>
+        </div>
+        <span class="comp-hero__num mono" data-reveal>BUT2 · S3 · IUT de Vannes</span>
+        <h1 class="comp-hero__title" data-reveal>Alimentation d'un datawarehouse<br>Pipeline ETL Talend<span class="hero__dot">.</span></h1>
+        <p class="comp-hero__tagline" data-reveal>Intégration de données commerciales hétérogènes en étoile — chargement en trois zones, historisation SCD des clients, orchestration par job maître et vues matérialisées</p>
+      </div>
+    </section>
+
+    <!-- A — Programme national -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__num mono">A</span>
+          <h2 class="section__title">Objectifs du programme national</h2>
+        </div>
+        <div class="proj-content" data-reveal>
+          <p>
+            La SAÉ 302 confronte l'étudiant à la manipulation concrète d'un entrepôt de données :
+            analyser la structure du DWH cible et des sources à exploiter, définir le plan
+            d'alimentation, spécifier les transformations nécessaires puis les mettre en œuvre.
+            Elle introduit les <strong>ETL</strong> à travers des outils du marché et traite
+            des formats hétérogènes (texte, numérique, données relationnelles Oracle).
+          </p>
+          <p>Les objectifs visés par le PN pour cette SAÉ sont :</p>
+          <ul>
+            <li>Comprendre l'organisation des données en entreprise et le rôle central du DWH dans la chaîne décisionnelle</li>
+            <li>Identifier et résoudre les problèmes d'intégration de sources hétérogènes (clés divergentes, formats disparates, attributs manquants)</li>
+            <li>Comprendre la nécessité de tester et de corriger systématiquement un pipeline ETL</li>
+            <li>Apprécier l'intérêt des briques logicielles existantes (tMap, tJoin, tOracleRow…) et savoir les utiliser efficacement</li>
+            <li>Développer la rigueur requise dans la construction des flux et dans leur documentation</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- B — Problématique & Livrables -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__num mono">B</span>
+          <h2 class="section__title">Problématique & livrables</h2>
+        </div>
+        <div class="about-grid" data-reveal>
+          <div class="about-text">
+            <p>
+              Les données portent sur l'activité commerciale d'une entreprise : commandes
+              en magasin, paniers internet, clients, vendeurs, secteurs et dates — issues
+              de <strong>deux bases Oracle distinctes</strong> aux formats et logiques métier
+              parfois divergents. Comment centraliser ces sources hétérogènes dans un
+              <strong>datawarehouse en étoile</strong> pour un suivi analytique fiable des
+              performances commerciales par canal, client, période ou secteur ?
+            </p>
+            <p>
+              Contrainte spécifique : un même client peut changer de ville au fil du temps —
+              la gestion de l'historique de localisation (SCD) est un point critique du projet.
+              La fiabilisation et l'harmonisation des données (correspondance de clés, types,
+              complétude) sont aussi des enjeux centraux.
+            </p>
+          </div>
+          <div>
+            <div class="tools-bar" style="margin-bottom: 16px;">
+              <span class="tools-bar__label mono">Livrables :</span>
+              <div class="tools-bar__items">
+                <span class="tool-chip">Jobs Talend (staging → intégration → DWH)</span>
+                <span class="tool-chip">Job maître d'orchestration</span>
+                <span class="tool-chip">Vues matérialisées analytiques</span>
+              </div>
+            </div>
+            <div class="tools-bar">
+              <span class="tools-bar__label mono">Logiciels :</span>
+              <div class="tools-bar__items">
+                <span class="tool-chip">Talend Open Studio</span>
+                <span class="tool-chip">SQL Developer</span>
+                <span class="tool-chip">Oracle DB</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- C — Méthodologie -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__num mono">C</span>
+          <h2 class="section__title">Méthodologie</h2>
+        </div>
+        <div class="proj-steps" data-reveal>
+          <div class="proj-step">
+            <span class="proj-step__num mono">01</span>
+            <div class="proj-step__body">
+              <strong>Zone de staging — chargement brut et standardisation</strong>
+              <p>Extraction des deux bases Oracle sources vers une zone de staging (espace de travail intermédiaire). Chaque table source est chargée telle quelle, sans transformation métier. Nettoyage élémentaire : harmonisation des types de données, traitement des valeurs nulles, normalisation des formats de dates et de chaînes. Cette zone isole les sources et protège le DWH cible de tout problème de qualité amont.</p>
+            </div>
+          </div>
+          <div class="proj-step">
+            <span class="proj-step__num mono">02</span>
+            <div class="proj-step__body">
+              <strong>Zone d'intégration — fusion et harmonisation des sources</strong>
+              <p>Jointures entre les données magasin et web pour construire une vision unifiée des ventes. Résolution des conflits de clés entre les deux bases (identifiants clients, codes produits, codes secteurs non concordants) via des tables de correspondance et des <code>tMap</code>. Gestion des attributs manquants ou calculés (montant total, délais). Construction des dimensions analytiques : temps, canal de vente, vendeur.</p>
+            </div>
+          </div>
+          <div class="proj-step">
+            <span class="proj-step__num mono">03</span>
+            <div class="proj-step__body">
+              <strong>Chargement DWH étoile — dimensions, SCD et table de faits</strong>
+              <p>Chargement des dimensions finales avec <strong>clés de substitution</strong> (surrogate keys) générées dans Talend. Implémentation du <strong>SCD (Slowly Changing Dimension)</strong> sur la dimension Client : conservation de l'historique de localisation — une nouvelle ligne est insérée à chaque changement de ville, avec date de début et date de fin. Table de faits alimentée avec les mesures commerciales (quantité, CA, remise) liées aux clés de substitution des dimensions.</p>
+            </div>
+          </div>
+          <div class="proj-step">
+            <span class="proj-step__num mono">04</span>
+            <div class="proj-step__body">
+              <strong>Job maître, tests et vues matérialisées</strong>
+              <p>Orchestration de l'ensemble du pipeline via un <strong>job maître Talend</strong> qui enchaîne les jobs des trois zones dans le bon ordre. Tests systématiques à chaque étape : vérification des volumes (nombre de lignes attendu vs obtenu), contrôle des jointures (rejets tMap), debug des erreurs de types et de flux. En sortie, des <strong>vues matérialisées Oracle</strong> agrègent les mesures de la table de faits pour produire des indicateurs prêts à l'emploi (CA par canal, par secteur, par période).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- D — Résultats -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__num mono">D</span>
+          <h2 class="section__title">Résultats obtenus</h2>
+        </div>
+        <div class="proj-content" data-reveal>
+          <p>
+            Le datawarehouse en étoile est opérationnel et alimenté depuis les deux bases Oracle
+            sources. Le pipeline ETL complet — staging, intégration, chargement DWH — tourne
+            de bout en bout via le job maître Talend sans intervention manuelle.
+          </p>
+          <ul>
+            <li>Dimension Client avec historisation SCD fonctionnelle : chaque changement de ville génère une nouvelle ligne datée, sans perte de l'historique</li>
+            <li>Table de faits alimentée avec mesures commerciales cohérentes (CA, quantités, remises) et clés de substitution correctes</li>
+            <li>Vues matérialisées Oracle produisant des agrégats analytiques exploitables : CA par canal, par secteur géographique, par période</li>
+            <li>Tests systématiques à chaque zone : volumes vérifiés, rejets tMap traités, types harmonisés entre les deux sources</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- E — Apprentissages Critiques -->
+    <section class="section section--last">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__num mono">E</span>
+          <h2 class="section__title">Ce que j'en retire</h2>
+        </div>
+        <div class="acq-grid" data-reveal>
+          <div class="acq-item">
+            <span class="acq-item__code mono">AC21.01</span>
+            <p class="acq-item__desc">Comprendre l'architecture d'un datawarehouse en étoile et son rôle dans la chaîne décisionnelle — distinct d'une base de production, conçu pour l'analyse et l'historisation.</p>
+            <span class="acq-badge acq-badge--ok">Acquis</span>
+          </div>
+          <div class="acq-item">
+            <span class="acq-item__code mono">AC21.02</span>
+            <p class="acq-item__desc">Identifier et résoudre concrètement les problèmes d'intégration de sources hétérogènes : clés divergentes, formats incompatibles, attributs manquants, SCD pour l'historisation.</p>
+            <span class="acq-badge acq-badge--ok">Acquis</span>
+          </div>
+          <div class="acq-item">
+            <span class="acq-item__code mono">AC21.03</span>
+            <p class="acq-item__desc">Mettre en œuvre un pipeline ETL complet dans Talend — maîtrise des composants tMap, tJoin, tOracleRow, gestion des rejets et orchestration par job maître.</p>
+            <span class="acq-badge acq-badge--ok">Acquis</span>
+          </div>
+          <div class="acq-item">
+            <span class="acq-item__code mono">AC21.04</span>
+            <p class="acq-item__desc">Tester systématiquement chaque job (volumes, types, jonctions) et corriger les erreurs — comprendre que la rigueur dans un pipeline ETL conditionne la fiabilité de toute analyse en aval.</p>
+            <span class="acq-badge acq-badge--ok">Acquis</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <nav class="comp-nav" aria-label="Navigation">
+    <div class="container comp-nav__inner">
+      <a href="../competences/traiter.html" class="comp-nav__prev">
+        <span class="comp-nav__dir mono">← Retour</span>
+        <span class="comp-nav__name">Traiter</span>
+      </a>
+      <a href="../index.html#skills" class="comp-nav__home">Toutes les compétences</a>
+      <div></div>
+    </div>
+  </nav>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="mono">Cléo Le Bastard</span>
+      <span class="footer__sep">—</span>
+      <span>BUT Science des Données · IUT de Vannes</span>
+      <a href="../contact.html" class="footer__contact">Me contacter</a>
+      <span class="footer__year mono" id="footer-year"></span>
+    </div>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

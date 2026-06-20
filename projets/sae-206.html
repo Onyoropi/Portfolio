@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAÉ 206 — Fiches patients AP-HP · Cléo Le Bastard</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div class="bg" aria-hidden="true">
+    <div class="bg__glow bg__glow--1"></div>
+    <div class="bg__glow bg__glow--2"></div>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo">Cléo Le Bastard<span class="nav__logo-dot">.</span></a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="../index.html#about"  class="nav__link">À propos</a></li>
+        <li><a href="../index.html#skills" class="nav__link">Compétences</a></li>
+        <li><a href="../alternance.html" class="nav__link">Alternance</a></li>
+        <li><a href="../perspectives.html" class="nav__link">Perspectives</a></li>
+        <li><a href="../contact.html"      class="nav__link">Contact</a></li>
+      </ul>
+      <div class="nav__right">
+        <a href="https://github.com/Onyoropi" target="_blank" rel="noopener" class="nav__cta">GitHub →</a>
+        <button class="nav__burger" id="nav-burger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="comp-hero">
+      <div class="container">
+        <div class="comp-hero__top" data-reveal>
+          <a href="../competences/valoriser.html" class="comp-back">← Valoriser</a>
+          <span class="comp-pagination mono">SAÉ 206</span>
+        </div>
+        <span class="comp-hero__num mono" data-reveal>BUT1 · S2 · IUT de Vannes · AP-HP / ComPaRe · Groupe 5</span>
+        <h1 class="comp-hero__title" data-reveal>Fiches patients<br>AP-HP<span class="hero__dot">.</span></h1>
+        <p class="comp-hero__tagline" data-reveal>Pipeline complet de calcul de scores de santé et génération de fiches PDF personnalisées — application web Flask pour la diffusion sécurisée</p>
+      </div>
+    </section>
+
+    <!-- A — Programme national -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__num mono">A</span>
+          <h2 class="section__title">Objectifs du programme national</h2>
+        </div>
+        <div class="proj-content" data-reveal>
+          <p>
+            La SAÉ 206 est la SAÉ intégratrice du semestre 2, mobilisant simultanément les compétences
+            <strong>Traiter</strong>, <strong>Analyser</strong> et <strong>Valoriser</strong> au niveau 1.
+            Elle est conduite avec un <strong>commanditaire réel</strong> — l'AP-HP (Assistance Publique –
+            Hôpitaux de Paris) — dans le cadre du projet ComPaRe (Cohorte des Patients Recherche),
+            ce qui lui confère une dimension professionnelle concrète : réunions de suivi,
+            adaptation aux retours client, données médicales sensibles.
+          </p>
+          <p>Les objectifs visés par le PN pour cette SAÉ sont :</p>
+          <ul>
+            <li>Appréhender les besoins d'un commanditaire réel et mener un projet en autonomie</li>
+            <li>Traiter, nettoyer et fusionner des données hétérogènes issues de sources multiples</li>
+            <li>Automatiser le calcul de scores de santé et la génération de documents PDF sous R</li>
+            <li>Développer une application web sécurisée pour la diffusion des résultats à grande échelle</li>
+            <li>Communiquer des résultats cliniques complexes à un public de patients non-expert</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- B — Problématique & Livrables -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__num mono">B</span>
+          <h2 class="section__title">Problématique & livrables</h2>
+        </div>
+        <div class="about-grid" data-reveal>
+          <div class="about-text">
+            <p>
+              Le projet <strong>ComPaRe</strong> de l'AP-HP regroupe plus de 60 000 patients vivant avec
+              une ou plusieurs maladies chroniques. La problématique imposée : à partir de données issues
+              de <strong>10 questionnaires de santé</strong> (277 variables, 50 patients fictifs anonymisés,
+              12 pathologies), comment <strong>calculer automatiquement des scores de santé</strong> et
+              générer des fiches de synthèse personnalisées, accessibles via une application web sécurisée ?
+            </p>
+            <p>
+              L'enjeu central : rendre des scores cliniques (dépression, anxiété, qualité de vie,
+              activité physique…) compréhensibles et exploitables pour des patients sans bagage médical,
+              à une échelle de 60 000 personnes.
+            </p>
+          </div>
+          <div>
+            <div class="tools-bar" style="margin-bottom: 16px;">
+              <span class="tools-bar__label mono">Livrables :</span>
+              <div class="tools-bar__items">
+                <span class="tool-chip">Scripts R de calcul des scores</span>
+                <span class="tool-chip">50 fiches PDF personnalisées</span>
+                <span class="tool-chip">Application web Flask</span>
+              </div>
+            </div>
+            <div class="tools-bar">
+              <span class="tools-bar__label mono">Logiciels :</span>
+              <div class="tools-bar__items">
+                <span class="tool-chip">R / RStudio</span>
+                <span class="tool-chip">eq5d · dplyr · readxl</span>
+                <span class="tool-chip">ggplot2 · grid · gridtext</span>
+                <span class="tool-chip">Flask (Python) · rpy2</span>
+                <span class="tool-chip">HTML · CSS · JS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- C — Méthodologie -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__num mono">C</span>
+          <h2 class="section__title">Méthodologie</h2>
+        </div>
+        <div class="proj-steps" data-reveal>
+          <div class="proj-step">
+            <span class="proj-step__num mono">01</span>
+            <div class="proj-step__body">
+              <strong>Nettoyage et structuration des données sous Excel puis R</strong>
+              <p>10 fichiers CSV réceptionnés (277 variables, 50 patients fictifs anonymisés). Nettoyage sous Excel : encodage UTF-8, correction des nombres stockés en texte via <code>SUBSTITUE()</code> + <code>VALEURNOMBRE()</code>. Détection d'incohérences flagrantes (taille 2,34 m / poids 28 kg, contradictions de genre entre fichiers). Première réunion AP-HP pour signaler les anomalies → données corrigées + fichier des 12 maladies. Création d'un dictionnaire des données pour chaque fichier.</p>
+            </div>
+          </div>
+          <div class="proj-step">
+            <span class="proj-step__num mono">02</span>
+            <div class="proj-step__body">
+              <strong>Calcul des 10 scores et normalisation sous R</strong>
+              <p>Fusion des 10 fichiers en une table unique par <code>full_join</code> sur <code>IdParticipant</code> (dplyr). Calcul des 9 scores fournis par l'AP-HP : IPAQ, SIDORKIEWICZ, TBQ, EQ-5D-5L (via <code>eq5d::eq5d()</code> — seul outil disponible pour ce calcul, score entre -0,29 et 1), PHQ-9, GAD-7, PSQI, EPICES, MYMOP. Ajout de l'IMC à l'initiative du groupe. Normalisation de tous les scores sur [0,1]. Gestion des erreurs et valeurs manquantes avec messages explicites.</p>
+            </div>
+          </div>
+          <div class="proj-step">
+            <span class="proj-step__num mono">03</span>
+            <div class="proj-step__body">
+              <strong>Conception et génération des fiches PDF sous R</strong>
+              <p>Maquette Word pour définir la structure visuelle (charte ComPaRe). Implémentation sous R avec <code>grid</code>, <code>ggplot2</code>, <code>gridtext</code>, <code>png</code>. Structure des fiches : page 1 — informations patient (âge, sexe, maladie, IMC) + 4 scores ; page 2 — 5 scores restants. Pour chaque score : barre positionnée entre min et max de la cohorte, marqueurs couleur (score patient, moyenne, extrêmes), description interprétative. Nomenclature dynamique : <code>fichePatient_PART_X_JJ_MM_AAAA[_filtres].pdf</code>.</p>
+            </div>
+          </div>
+          <div class="proj-step">
+            <span class="proj-step__num mono">04</span>
+            <div class="proj-step__body">
+              <strong>Application web Flask — diffusion sécurisée et itérations client</strong>
+              <p>Backend Flask (Python) avec authentification par session (identifiant PART_X + mot de passe = date de naissance). Intégration de R via <code>rpy2</code> pour générer les PDF à la demande. Frontend HTML/CSS/JS : tableau de bord patient, graphique radar interactif des 10 scores, historique des fiches, système d'amis par maladie/âge/sexe, interface admin avec alertes sur scores critiques. 3 réunions AP-HP au total, chacune ayant orienté une itération du projet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- D — Résultats -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__num mono">D</span>
+          <h2 class="section__title">Résultats obtenus</h2>
+        </div>
+        <div class="proj-content" data-reveal>
+          <p>
+            L'application est entièrement fonctionnelle et couvre l'ensemble du pipeline :
+            de la donnée brute à la fiche consultable en ligne par le patient.
+          </p>
+          <ul>
+            <li><strong>50 fiches PDF</strong> générées automatiquement en <strong>38 secondes</strong> — soit ≈ 12h estimées pour les 60 000 patients ComPaRe</li>
+            <li>10 scores calculés par patient, normalisés sur [0,1], avec gestion documentée des erreurs</li>
+            <li>Application web avec authentification, affichage PDF in-browser, radar interactif, historique par date</li>
+            <li>Interface admin : suivi des connexions, alertes scores critiques, génération groupée avec filtres</li>
+            <li>Nomenclature dynamique intégrant les filtres actifs : <code>fichePatient_PART_1_10_06_2025_Parkinson_54-60.pdf</code></li>
+            <li>3 réunions de suivi avec l'AP-HP ayant chacune orienté une itération du projet</li>
+          </ul>
+          <div class="proj-cta">
+            <a href="../assets/docs/rapport-sae-206.pdf" class="btn btn--primary" target="_blank" rel="noopener">Voir les résultats →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- E — Apprentissages Critiques -->
+    <section class="section section--last">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__num mono">E</span>
+          <h2 class="section__title">Ce que j'en retire</h2>
+        </div>
+        <div class="acq-grid" data-reveal>
+          <div class="acq-item">
+            <span class="acq-item__code mono">AC11.01</span>
+            <p class="acq-item__desc">Appréhender les besoins du commanditaire et de l'environnement économique — 3 réunions AP-HP structurant chaque itération du projet.</p>
+            <span class="acq-badge acq-badge--ok">Acquis</span>
+          </div>
+          <div class="acq-item">
+            <span class="acq-item__code mono">AC11.05</span>
+            <p class="acq-item__desc">Prendre conscience des enjeux de la structuration, de la collecte et de la qualité des données — incohérences détectées avant tout calcul.</p>
+            <span class="acq-badge acq-badge--ok">Acquis</span>
+          </div>
+          <div class="acq-item">
+            <span class="acq-item__code mono">AC12.05</span>
+            <p class="acq-item__desc">Comprendre l'intérêt de l'utilisation d'un modèle probabiliste — score EQ-5D-5L via le package eq5d, seul outil disponible pour ce calcul.</p>
+            <span class="acq-badge acq-badge--ok">Acquis</span>
+          </div>
+          <div class="acq-item">
+            <span class="acq-item__code mono">AC13.05</span>
+            <p class="acq-item__desc">Comprendre les intérêts de la datavisualisation et de l'infographie — fiches PDF et radar interactif conçus pour des patients non-experts.</p>
+            <span class="acq-badge acq-badge--ok">Acquis</span>
+          </div>
+          <div class="acq-item">
+            <span class="acq-item__code mono">AC13.04</span>
+            <p class="acq-item__desc">Mesurer l'importance d'expliciter la démarche suivie lors de la restitution — chaque score est accompagné d'une description interprétative dans la fiche.</p>
+            <span class="acq-badge acq-badge--ok">Acquis</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <nav class="comp-nav" aria-label="Navigation">
+    <div class="container comp-nav__inner">
+      <a href="../competences/valoriser.html" class="comp-nav__prev">
+        <span class="comp-nav__dir mono">← Retour</span>
+        <span class="comp-nav__name">Valoriser</span>
+      </a>
+      <a href="../index.html#skills" class="comp-nav__home">Toutes les compétences</a>
+      <div></div>
+    </div>
+  </nav>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="mono">Cléo Le Bastard</span>
+      <span class="footer__sep">—</span>
+      <span>BUT Science des Données · IUT de Vannes</span>
+      <a href="../contact.html" class="footer__contact">Me contacter</a>
+      <span class="footer__year mono" id="footer-year"></span>
+    </div>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

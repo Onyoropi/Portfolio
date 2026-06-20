@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cléo Le Bastard — Portfolio</title>
+  <meta name="description" content="Portfolio de Cléo Le Bastard — Étudiant en BUT Science des Données, parcours EMS (Exploration et modélisation statistique), IUT de Vannes. Alternant data scientist / data analyst au sein du groupe La Poste. Découvrez mes compétences en traitement, analyse, modélisation et valorisation de données, ainsi que mes projets réalisés à l'IUT.">
+
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Fond animé -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div class="bg" aria-hidden="true">
+    <div class="bg__glow bg__glow--1"></div>
+    <div class="bg__glow bg__glow--2"></div>
+  </div>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">Portfolio Cléo Le Bastard<span class="nav__logo-dot">.</span></a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#about"    class="nav__link">À propos</a></li>
+        <li><a href="#skills"   class="nav__link">Compétences</a></li>
+        <li><a href="alternance.html"   class="nav__link">Alternance</a></li>
+        <li><a href="perspectives.html" class="nav__link">Perspectives</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+      <div class="nav__right">
+        <a href="https://github.com/Onyoropi" target="_blank" rel="noopener" class="nav__cta">GitHub →</a>
+        <button class="nav__burger" id="nav-burger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero">
+      <div class="hero__inner">
+        <p class="hero__label mono" data-reveal>
+          BUT Science des Données · EMS · IUT de Vannes
+        </p>
+        <h1 class="hero__title" data-reveal>
+          Cléo Le Bastard<span class="hero__dot">.</span>
+        </h1>
+        <p class="hero__sub" data-reveal>
+          Apprenti data scientist / data analyst au sein du Groupe La Poste, passionné par la modélisation statistique,
+          ainsi que l'intelligence artificielle.
+        </p>
+        <div class="hero__cta" data-reveal>
+          <a href="#skills" class="btn btn--primary">Voir mes compétences</a>
+          <a href="contact.html" class="btn btn--ghost">Me contacter</a>
+        </div>
+      </div>
+      <div class="hero__scroll" aria-hidden="true">
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ===================== À PROPOS ===================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__num mono">01</span>
+          <h2 class="section__title">À propos</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text" data-reveal>
+            <p>
+              Bonjour ! Je suis <strong>Cléo Le Bastard</strong>, 20 ans, étudiant en
+              2ème année de <strong>BUT Science des Données</strong> (parcours EMS — Exploration et
+              Modélisation Statistique) à l'IUT de Vannes.
+            </p>
+            <p>
+              En parallèle, je suis en <strong>1ère année d'alternance</strong> au sein du
+              <strong>Groupe La Poste</strong> à la Maison de l'Innovation à Nantes, où je travaille
+              quotidiennement sur des projets d'analyse de données concrets.
+            </p>
+            <p>
+              Passionnée par les mathématiques et plus particulièrement les statistiques, je prends un réel
+              plaisir à utiliser cet outil pour faire parler les données et découvrir des phénomènes inconnus au premier abord.
+            </p>
+          </div>
+
+          <div class="timeline" data-reveal>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-body">
+                <div class="timeline-date mono">Sept. 2025 — Aout 2026</div>
+                <div class="timeline-title">Alternant Data Scientist / Data Analyst · Groupe La Poste</div>
+                <div class="timeline-place">Maison de l'Innovation · Nantes</div>
+                <p class="timeline-desc">
+                  Exploration d'une base de données graphes Neo4j (APOC, Cypher),
+                  analyse de données sensibles en environnement de production,
+                  démantelage des réseaux de fraudeurs.
+                </p>
+                <div class="timeline-tags">
+                  <span class="stag stag--high">Neo4j</span>
+                  <span class="stag stag--mid">Cypher</span>
+                  <span class="stag stag--low">Python</span>
+                </div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-body">
+                <div class="timeline-date mono">2024 — 2026</div>
+                <div class="timeline-title">BUT Science des Données · Parcours EMS</div>
+                <div class="timeline-place">IUT de Vannes</div>
+                <p class="timeline-desc">
+                  Statistiques descriptives / inférentielles, Python, R, bases de données, machine learning,
+                  visualisation de données, modélisation statistique, intelligence artificielle.
+                </p>
+              </div>
+            </div>
+            <div class="timeline-item timeline-item--dim">
+              <div class="timeline-marker timeline-marker--dim"></div>
+              <div class="timeline-body">
+                <div class="timeline-date mono">2024</div>
+                <div class="timeline-title">Baccalauréat général</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== COMPÉTENCES ===================== -->
+    <section class="section section--last" id="skills">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__num mono">02</span>
+          <h2 class="section__title">Compétences</h2>
+          <p class="section__desc">Les 4 compétences du BUT SD — parcours EMS.</p>
+        </div>
+
+        <div class="skills-grid">
+          <a href="competences/traiter.html" class="skill-card" data-reveal>
+            <span class="skill-card__num mono">01</span>
+            <h3 class="skill-card__title">Traiter</h3>
+            <p class="skill-card__desc">Gérer le cycle de vie de la donnée</p>
+            <div class="skill-tags">
+              <span class="stag stag--high">SQL</span>
+              <span class="stag stag--high">Bases de données relationnelles</span>
+              <span class="stag stag--mid">ETL / Talend</span>
+              <span class="stag stag--mid">Technologies Web</span>
+              <span class="stag stag--mid">SID (Systèmes d'information décisionnels)</span>
+            </div>
+            <span class="skill-card__cta mono">Voir les projets réalisés →</span>
+          </a>
+          <a href="competences/analyser.html" class="skill-card" data-reveal>
+            <span class="skill-card__num mono">02</span>
+            <h3 class="skill-card__title">Analyser</h3>
+            <p class="skill-card__desc">Analyse statistique des données</p>
+            <div class="skill-tags">
+              <span class="stag stag--high">RStudio, Python</span>
+              <span class="stag stag--high">Statistiques descriptives / inférentielles</span>
+              <span class="stag stag--mid">Séries temporelles</span>
+              <span class="stag stag--mid">ACP · Clustering</span>
+            </div>
+            <span class="skill-card__cta mono">Voir les projets réalisés →</span>
+          </a>
+          <a href="competences/modeliser.html" class="skill-card" data-reveal>
+            <span class="skill-card__num mono">03</span>
+            <h3 class="skill-card__title">Modéliser</h3>
+            <p class="skill-card__desc">Cadre statistique — spécifique EMS</p>
+            <div class="skill-tags">
+              <span class="stag stag--high">Modèle Linéaire</span>
+              <span class="stag stag--high">Régression multiple</span>
+              <span class="stag stag--mid">Régression linéaire</span>
+              <span class="stag stag--mid">Sondage & échantillonnage</span>
+            </div>
+            <span class="skill-card__cta mono">Voir les projets réalisés →</span>
+          </a>
+          <a href="competences/valoriser.html" class="skill-card" data-reveal>
+            <span class="skill-card__num mono">04</span>
+            <h3 class="skill-card__title">Valoriser</h3>
+            <p class="skill-card__desc">Restitution &amp; communication</p>
+            <div class="skill-tags">
+              <span class="stag stag--high">RShiny, Qgis, Power BI</span>
+              <span class="stag stag--high">Suite Office (Powerpoint, Word, Excel)</span>
+              <span class="stag stag--mid">Économie, Communication, Anglais</span>
+            </div>
+            <span class="skill-card__cta mono">Voir les projets réalisés →</span>
+          </a>
+        </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="mono">Cléo Le Bastard</span>
+      <span class="footer__sep">—</span>
+      <span>BUT Science des Données · IUT de Vannes</span>
+      <a href="contact.html" class="footer__contact">Me contacter</a>
+      <span class="footer__year mono" id="footer-year"></span>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
